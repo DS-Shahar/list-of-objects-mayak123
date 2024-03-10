@@ -23,13 +23,18 @@ public static void insert1(Node<Task> l, Task task1) {
 
 	}
 	public static void update1(Node<Task> l,int c,boolean b) {
+		Node<Task>p= new Node(-1,l) ;
 		if(b!=true) {
-			l.getValue().subCredit(c);
-			if(l.getValue().getCredit()<10) {
-				l.getValue().addCredit(100);
+			l.getNext().getValue().subCredit(c);
+			if(l.getNext().getValue().getCredit()<10) {
+				l.getNext().getValue().addCredit(100);
 			}
 		}
 		else {
+			l.setNext(l.getNext().getNext());;
+		}
+	}
+}
 			
 		}
 	}
