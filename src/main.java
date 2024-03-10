@@ -22,8 +22,8 @@ public static void insert1(Node<Task> l, Task task1) {
 		}
 
 	}
-	public static void update1(Node<Task> l,int c,boolean b) {
-		Node<Task>p= new Node(-1,l) ;
+	public static Node<Task> update1(Node<Task> l,int c,boolean b) {
+		Node<Task>p= new Node(null,l) ;
 		if(b!=true) {
 			l.getNext().getValue().subCredit(c);
 			if(l.getNext().getValue().getCredit()<10) {
@@ -33,8 +33,8 @@ public static void insert1(Node<Task> l, Task task1) {
 		else {
 			l.setNext(l.getNext().getNext());;
 		}
+		return l.getNext();
 	}
-}
 			
 		}
 	}
