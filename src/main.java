@@ -9,13 +9,13 @@ public static void insert1(Node<Task> l, Task task1) {
 		while(p!=null&&count!=1) {
 			if(p.getValue().getPriority()<=task1.getPriority()) {
 				p1.setNext(new Node <Task> (p.getValue()));	
-				p1=p1.getNext();
 				p=p.getNext();
 			}
 			else {
 				p1.setNext(new Node <Task> (task1));
 				count++;
 			}
+			p1=p1.getNext();
 		}
 		if(count!=1) {
 			p1.setNext(new Node <Task> (task1));	
