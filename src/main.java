@@ -23,7 +23,7 @@ public static void insert1(Node<Task> l, Task task1) {
 
 	}
 	public static Node<Task> update1(Node<Task> l,int c,boolean b) {
-		Node<Task>p= new Node(null,l) ;
+		Node<Task>p= new Node(task1,l) ;
 		if(b!=true) {
 			l.getNext().getValue().subCredit(c);
 			if(l.getNext().getValue().getCredit()<10) {
