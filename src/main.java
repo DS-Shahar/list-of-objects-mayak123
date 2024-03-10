@@ -1,4 +1,6 @@
-	public static void insert1(Node<Task> l, Task task1) {
+
+
+public static void insert1(Node<Task> l, Task task1) {
 		Node<Task>p=l;
 		Node<Task>l1 = new Node<Task> (null);
 		Node<Task>p1=l1;
