@@ -1,6 +1,7 @@
 
 
 public static void insert1(Node<Task> l, Task task1) {
+		public static void insert1(Node<Task> l, Task task1) {
 		Node<Task>p=l;
 		Node<Task>l1 = new Node<Task> (null);
 		Node<Task>p1=l1;
@@ -8,6 +9,8 @@ public static void insert1(Node<Task> l, Task task1) {
 		while(p!=null&&count!=1) {
 			if(p.getValue().getPriority()<=task1.getPriority()) {
 				p1.setNext(new Node <Task> (p.getValue()));	
+				p1=p1.getNext();
+				p=p.getNext();
 			}
 			else {
 				p1.setNext(new Node <Task> (task1));
@@ -16,9 +19,11 @@ public static void insert1(Node<Task> l, Task task1) {
 		}
 		if(count!=1) {
 			p1.setNext(new Node <Task> (task1));	
+			p1=p1.getNext();
 		}
 		while(p1!=null) {
 			p1.setNext(new Node <Task> (p.getValue()));	
+			p1=p1.getNext();
 		}
 
 	}
