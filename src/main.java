@@ -21,9 +21,10 @@ public static void insert1(Node<Task> l, Task task1) {
 			p1.setNext(new Node <Task> (task1));	
 			p1=p1.getNext();
 		}
-		while(p1!=null) {
+		while(p!=null) {
 			p1.setNext(new Node <Task> (p.getValue()));	
 			p1=p1.getNext();
+			p=p.getNext();
 		}
 
 	}
