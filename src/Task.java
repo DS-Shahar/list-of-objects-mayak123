@@ -28,6 +28,6 @@
 			}
 		}
 		else {
-			l.setNext(l.getNext());;
+			
 		}
 	}
